@@ -126,8 +126,9 @@
     NSString *photoString = (NSString *) photo;
     [cell.imageView setImageWithURL:[NSURL URLWithString:photoString]];
     
-    
     return cell;
+    
+    
 }
 
 @end
