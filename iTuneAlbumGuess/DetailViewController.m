@@ -128,21 +128,23 @@
         cell = [[AlbumCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    cell.albumNameLabel.text = [array objectAtIndex:indexPath.row];
+    // Tar bort all text efter bindestreck.
+    NSString *adjusted;
+    
+    NSString *rawAlbumNameLabel = [array objectAtIndex:indexPath.row];
+    NSString * test = [NSString stringWithString:rawAlbumNameLabel];
+    NSRange range = [test rangeOfString:@"-"];
+    if (range.length > 0)
+    {
+       adjusted = [test substringToIndex:range.location];
+    }
+    
+    cell.albumNameLabel.text = adjusted;//[array objectAtIndex:indexPath.row];
     
     // Photos
     AlbumsPhoto *photo = photosArray[indexPath.row];
     NSString *photoString = (NSString *) photo;
     [cell.albumImageView setImageWithURL:[NSURL URLWithString:photoString]];
-    
-    // En metod för att ta bort bindestrcket och allt som är bakom. Vi ska använda denna metod senare.
-//    NSString * test = [NSString stringWithString:@"Searching for Sugar Man - Rodriguez"];
-//    NSRange range = [test rangeOfString:@"-"];
-//    if (range.length > 0)
-//    {
-//        NSString *adjusted = [test substringToIndex:range.location];
-//        NSLog(@"result: %@", adjusted);
-//    }
     
     return cell;
     
