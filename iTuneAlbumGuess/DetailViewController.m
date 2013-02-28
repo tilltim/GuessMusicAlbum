@@ -96,8 +96,9 @@
         NSDictionary *label2 = [arrayOfImImage[0] objectForKey:@"label"];
         
         [photosArray addObject:label2];
+        [[self myTableView] reloadData];
     }
-    [[self myTableView] reloadData];
+    
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -121,11 +122,6 @@
     }
     
     cell.albumNameLabel.text = [array objectAtIndex:indexPath.row];
-    
-//    // Photos
-//    AlbumsPhoto *photo = photosArray[indexPath.row];
-//    NSString *photoString = (NSString *) photo;
-//    [cell.imageView setImageWithURL:[NSURL URLWithString:photoString]];
     
     // Photos
     AlbumsPhoto *photo = photosArray[indexPath.row];
