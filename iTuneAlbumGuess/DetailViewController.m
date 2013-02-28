@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "AlbumsPhoto.h"
+#import "AlbumCell.h"
 
 @interface DetailViewController ()
 {
@@ -112,19 +113,24 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    AlbumCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (!cell)
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[AlbumCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    cell.textLabel.text = [array objectAtIndex:indexPath.row];
+    cell.albumNameLabel.text = [array objectAtIndex:indexPath.row];
+    
+//    // Photos
+//    AlbumsPhoto *photo = photosArray[indexPath.row];
+//    NSString *photoString = (NSString *) photo;
+//    [cell.imageView setImageWithURL:[NSURL URLWithString:photoString]];
     
     // Photos
     AlbumsPhoto *photo = photosArray[indexPath.row];
     NSString *photoString = (NSString *) photo;
-    [cell.imageView setImageWithURL:[NSURL URLWithString:photoString]];
+    [cell.albumImageView setImageWithURL:[NSURL URLWithString:photoString]];
     
     // En metod för att ta bort bindestrcket och allt som är bakom. Vi ska använda denna metod senare.
 //    NSString * test = [NSString stringWithString:@"Searching for Sugar Man - Rodriguez"];

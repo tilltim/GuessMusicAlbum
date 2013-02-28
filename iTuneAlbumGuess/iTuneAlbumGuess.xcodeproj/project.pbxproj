@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		845CF28016DF8AFF007D359F /* AlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 845CF27F16DF8AFF007D359F /* AlbumCell.m */; };
+		845CF28916DF8F66007D359F /* AlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 845CF28816DF8F66007D359F /* AlbumCell.m */; };
 		84D4F27B16DF680A00612274 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D4F27A16DF680A00612274 /* UIKit.framework */; };
 		84D4F27D16DF680A00612274 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D4F27C16DF680A00612274 /* Foundation.framework */; };
 		84D4F27F16DF680A00612274 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D4F27E16DF680A00612274 /* CoreGraphics.framework */; };
@@ -33,8 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		845CF27E16DF8AFF007D359F /* AlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumCell.h; sourceTree = SOURCE_ROOT; };
-		845CF27F16DF8AFF007D359F /* AlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumCell.m; sourceTree = SOURCE_ROOT; };
+		845CF28716DF8F66007D359F /* AlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumCell.h; sourceTree = "<group>"; };
+		845CF28816DF8F66007D359F /* AlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumCell.m; sourceTree = "<group>"; };
 		84D4F27616DF680A00612274 /* iTuneAlbumGuess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTuneAlbumGuess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D4F27A16DF680A00612274 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84D4F27C16DF680A00612274 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -96,6 +96,8 @@
 				84D4F28016DF680A00612274 /* iTuneAlbumGuess */,
 				84D4F2C316DF6F6200612274 /* AlbumsPhoto.h */,
 				84D4F2C416DF6F6200612274 /* AlbumsPhoto.m */,
+				845CF28716DF8F66007D359F /* AlbumCell.h */,
+				845CF28816DF8F66007D359F /* AlbumCell.m */,
 				84D4F27916DF680A00612274 /* Frameworks */,
 				84D4F27716DF680A00612274 /* Products */,
 				84D4F2A616DF6EDF00612274 /* AFNetworking */,
@@ -126,8 +128,6 @@
 				84D4F28916DF680A00612274 /* AppDelegate.h */,
 				84D4F28A16DF680A00612274 /* AppDelegate.m */,
 				84D4F29216DF680A00612274 /* MainStoryboard.storyboard */,
-				845CF27E16DF8AFF007D359F /* AlbumCell.h */,
-				845CF27F16DF8AFF007D359F /* AlbumCell.m */,
 				84D4F29516DF680A00612274 /* ViewController.h */,
 				84D4F29616DF680A00612274 /* ViewController.m */,
 				84D4F2A316DF6CA700612274 /* DetailViewController.h */,
@@ -257,7 +257,7 @@
 				84D4F2C116DF6EDF00612274 /* AFXMLRequestOperation.m in Sources */,
 				84D4F2C216DF6EDF00612274 /* UIImageView+AFNetworking.m in Sources */,
 				84D4F2C516DF6F6200612274 /* AlbumsPhoto.m in Sources */,
-				845CF28016DF8AFF007D359F /* AlbumCell.m in Sources */,
+				845CF28916DF8F66007D359F /* AlbumCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

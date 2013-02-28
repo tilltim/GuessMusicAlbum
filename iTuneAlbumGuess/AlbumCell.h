@@ -6,8 +6,11 @@
 //  Copyright (c) 2013 Admin. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface AlbumCell : NSObject
+@interface AlbumCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *albumNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *artistNameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *albumImageView;
 
 @end
