@@ -111,9 +111,9 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name of the artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gS2-kU-bTw">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name of artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVb-Nf-XFf">
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="22" id="c4T-WR-s9i"/>
+                                                        <constraint firstAttribute="height" constant="21" id="J7l-Q3-3S2"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -123,18 +123,17 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="gS2-kU-bTw" firstAttribute="leading" secondItem="SfN-X4-qMJ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="4qy-Rd-cQm"/>
                                             <constraint firstItem="4J9-Mc-qcF" firstAttribute="leading" secondItem="SfN-X4-qMJ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="7S9-QC-iFh"/>
                                             <constraint firstItem="SfN-X4-qMJ" firstAttribute="leading" secondItem="yhI-En-H7b" secondAttribute="leading" constant="19" id="SEl-pX-qgV"/>
-                                            <constraint firstItem="gS2-kU-bTw" firstAttribute="top" secondItem="yhI-En-H7b" secondAttribute="top" constant="30" id="Upo-B5-Qu7"/>
-                                            <constraint firstItem="gS2-kU-bTw" firstAttribute="trailing" secondItem="4J9-Mc-qcF" secondAttribute="trailing" type="default" id="YiR-Nc-HoN"/>
+                                            <constraint firstItem="MVb-Nf-XFf" firstAttribute="top" secondItem="yhI-En-H7b" secondAttribute="top" constant="30" id="fPh-HQ-ZVU"/>
+                                            <constraint firstItem="MVb-Nf-XFf" firstAttribute="leading" secondItem="SfN-X4-qMJ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="lT3-57-Voa"/>
                                             <constraint firstItem="SfN-X4-qMJ" firstAttribute="centerY" secondItem="yhI-En-H7b" secondAttribute="centerY" type="default" id="u5K-ec-Pfs"/>
                                             <constraint firstItem="4J9-Mc-qcF" firstAttribute="top" secondItem="yhI-En-H7b" secondAttribute="top" constant="11" id="vCX-bU-G1r"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="albumImageView" destination="SfN-X4-qMJ" id="MaO-0C-fw4"/>
                                             <outlet property="albumNameLabel" destination="4J9-Mc-qcF" id="S0Q-Mu-vtO"/>
-                                            <outlet property="artistNameLabel" destination="gS2-kU-bTw" id="mLK-O1-jnQ"/>
+                                            <outlet property="artistNameLabel" destination="MVb-Nf-XFf" id="xXp-iv-bkG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

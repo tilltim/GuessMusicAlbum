@@ -98,9 +98,9 @@
         NSDictionary *label2 = [arrayOfImImage[0] objectForKey:@"label"];
         
         [photosArray addObject:label2];
-        
-        [[self myTableView] reloadData];
 
+        [[self myTableView] reloadData];
+        
         
         //ArtistName
         NSDictionary *artistName = [diction objectForKey:@"im:artist"];
@@ -108,7 +108,8 @@
         
         [artistArray addObject:label3];
         
-        NSLog(@"Atist: %@", label3);
+        NSLog(@"Artist: %@", artistArray);
+        
         
         
         
@@ -134,7 +135,7 @@
     
     if (!cell)
     {
-        cell = [[AlbumCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[AlbumCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
 
 
@@ -151,7 +152,11 @@
     
     cell.albumNameLabel.text = adjusted;//[array objectAtIndex:indexPath.row];
 
-    cell.artistNameLabel.text = [artistArray objectAtIndex:indexPath.row];
+
+    
+//    cell.artistNameLabel.text = [artistArray objectAtIndex:indexPath.row];
+//    NSLog(@"artistLabel %@", artistArray);
+
 
     // Photos
     AlbumsPhoto *photo = photosArray[indexPath.row];
@@ -166,6 +171,7 @@
 //        NSString *adjusted = [test substringToIndex:range.location];
 //        NSLog(@"result: %@", adjusted);
 //    }
+    
     
     return cell;
     
