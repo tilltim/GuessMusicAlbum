@@ -136,7 +136,7 @@
     {
         cell = [[AlbumCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-<<<<<<< HEAD
+
 
     // Tar bort all text efter bindestreck.
     NSString *adjusted;
@@ -151,14 +151,8 @@
     
     cell.albumNameLabel.text = adjusted;//[array objectAtIndex:indexPath.row];
 
-    cell.albumNameLabel.text = [array objectAtIndex:indexPath.row];
     cell.artistNameLabel.text = [artistArray objectAtIndex:indexPath.row];
 
-=======
-    
-    cell.albumNameLabel.text = [array objectAtIndex:indexPath.row];
->>>>>>> Revert "Lagt till en ta bort text-efter-bindestreck-metod."
-    
     // Photos
     AlbumsPhoto *photo = photosArray[indexPath.row];
     NSString *photoString = (NSString *) photo;
