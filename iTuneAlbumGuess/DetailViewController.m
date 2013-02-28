@@ -126,8 +126,16 @@
     NSString *photoString = (NSString *) photo;
     [cell.imageView setImageWithURL:[NSURL URLWithString:photoString]];
     
-    return cell;
+    // En metod för att ta bort bindestrcket och allt som är bakom. Vi ska använda denna metod senare.
+//    NSString * test = [NSString stringWithString:@"Searching for Sugar Man - Rodriguez"];
+//    NSRange range = [test rangeOfString:@"-"];
+//    if (range.length > 0)
+//    {
+//        NSString *adjusted = [test substringToIndex:range.location];
+//        NSLog(@"result: %@", adjusted);
+//    }
     
+    return cell;
     
 }
 
