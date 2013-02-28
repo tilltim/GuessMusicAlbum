@@ -97,13 +97,13 @@
         NSDictionary *label2 = [arrayOfImImage[0] objectForKey:@"label"];
         
         [photosArray addObject:label2];
-<<<<<<< HEAD
+
         [[self myTableView] reloadData];
-=======
+
         
         
         [array addObject:label];
->>>>>>> Skapat en artistArray
+
     }
     
 }
