@@ -87,6 +87,7 @@
     
     for (NSDictionary *diction in arrayOffEntry)
     {
+        //AlbumName
         NSDictionary *title = [diction objectForKey:@"title"];
         NSString *label = [title objectForKey:@"label"];
         
@@ -97,12 +98,20 @@
         NSDictionary *label2 = [arrayOfImImage[0] objectForKey:@"label"];
         
         [photosArray addObject:label2];
-
+        
         [[self myTableView] reloadData];
 
         
+        //ArtistName
+        NSDictionary *artistName = [diction objectForKey:@"im:artist"];
+        NSString *label3 = [artistName objectForKey:@"label"];
         
-        [array addObject:label];
+        [artistArray addObject:label3];
+        
+        NSLog(@"Atist: %@", label3);
+        
+        
+        
 
     }
     
@@ -128,6 +137,7 @@
         cell = [[AlbumCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+<<<<<<< HEAD
     // Tar bort all text efter bindestreck.
     NSString *adjusted;
     
@@ -140,6 +150,10 @@
     }
     
     cell.albumNameLabel.text = adjusted;//[array objectAtIndex:indexPath.row];
+=======
+    cell.albumNameLabel.text = [array objectAtIndex:indexPath.row];
+    cell.artistNameLabel.text = [artistArray objectAtIndex:indexPath.row];
+>>>>>>> Hämtar artistnamnet
     
     // Photos
     AlbumsPhoto *photo = photosArray[indexPath.row];

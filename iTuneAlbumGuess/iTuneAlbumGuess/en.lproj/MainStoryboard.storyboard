@@ -51,7 +51,7 @@
                                     <segue destination="AdB-6C-3Ki" kind="push" identifier="toUsaList" id="8S1-BG-NSc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Välj vilken albums lista" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDf-Nc-coK">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Välj vilken albumlista" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDf-Nc-coK">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -83,20 +83,23 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="76" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Yhj-e3-j6V">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="63" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Yhj-e3-j6V">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="263" id="i1p-6P-h91"/>
+                                </constraints>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" rowHeight="76" id="yhI-En-H7b" customClass="AlbumCell">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="76"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" rowHeight="63" id="yhI-En-H7b" customClass="AlbumCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="63"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="62"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SfN-X4-qMJ">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="59" id="vh6-bG-Bmx"/>
-                                                        <constraint firstAttribute="height" constant="56" id="ynr-oT-G11"/>
+                                                        <constraint firstAttribute="width" constant="50" id="Bhk-pR-d16"/>
+                                                        <constraint firstAttribute="height" constant="48" id="D2V-wm-0rd"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name of the album" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4J9-Mc-qcF">
@@ -110,7 +113,7 @@
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name of the artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gS2-kU-bTw">
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="22" id="fcj-J1-d5C"/>
+                                                        <constraint firstAttribute="height" constant="22" id="c4T-WR-s9i"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -120,13 +123,13 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="gS2-kU-bTw" firstAttribute="leading" secondItem="SfN-X4-qMJ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="BxJ-mU-znF"/>
+                                            <constraint firstItem="gS2-kU-bTw" firstAttribute="leading" secondItem="SfN-X4-qMJ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="4qy-Rd-cQm"/>
+                                            <constraint firstItem="4J9-Mc-qcF" firstAttribute="leading" secondItem="SfN-X4-qMJ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="7S9-QC-iFh"/>
+                                            <constraint firstItem="SfN-X4-qMJ" firstAttribute="leading" secondItem="yhI-En-H7b" secondAttribute="leading" constant="19" id="SEl-pX-qgV"/>
+                                            <constraint firstItem="gS2-kU-bTw" firstAttribute="top" secondItem="yhI-En-H7b" secondAttribute="top" constant="30" id="Upo-B5-Qu7"/>
                                             <constraint firstItem="gS2-kU-bTw" firstAttribute="trailing" secondItem="4J9-Mc-qcF" secondAttribute="trailing" type="default" id="YiR-Nc-HoN"/>
-                                            <constraint firstItem="4J9-Mc-qcF" firstAttribute="top" secondItem="yhI-En-H7b" secondAttribute="top" constant="20" type="default" id="ZHJ-IY-rNj"/>
-                                            <constraint firstItem="SfN-X4-qMJ" firstAttribute="centerY" secondItem="yhI-En-H7b" secondAttribute="centerY" type="default" id="hnp-A1-YWs"/>
-                                            <constraint firstAttribute="bottom" secondItem="gS2-kU-bTw" secondAttribute="bottom" constant="16" id="lCf-to-bv1"/>
-                                            <constraint firstItem="SfN-X4-qMJ" firstAttribute="leading" secondItem="yhI-En-H7b" secondAttribute="leading" constant="10" id="x2l-St-M45"/>
-                                            <constraint firstItem="4J9-Mc-qcF" firstAttribute="leading" secondItem="SfN-X4-qMJ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="yhr-kF-iEM"/>
+                                            <constraint firstItem="SfN-X4-qMJ" firstAttribute="centerY" secondItem="yhI-En-H7b" secondAttribute="centerY" type="default" id="u5K-ec-Pfs"/>
+                                            <constraint firstItem="4J9-Mc-qcF" firstAttribute="top" secondItem="yhI-En-H7b" secondAttribute="top" constant="11" id="vCX-bU-G1r"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="albumImageView" destination="SfN-X4-qMJ" id="MaO-0C-fw4"/>
@@ -139,8 +142,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Yhj-e3-j6V" firstAttribute="top" secondItem="ULb-IJ-JRg" secondAttribute="top" type="default" id="9QZ-cQ-mth"/>
-                            <constraint firstItem="Yhj-e3-j6V" firstAttribute="bottom" secondItem="ULb-IJ-JRg" secondAttribute="bottom" type="default" id="WTj-Hu-Efm"/>
+                            <constraint firstItem="Yhj-e3-j6V" firstAttribute="centerY" secondItem="ULb-IJ-JRg" secondAttribute="centerY" type="default" id="7W5-96-GaZ"/>
                             <constraint firstItem="Yhj-e3-j6V" firstAttribute="trailing" secondItem="ULb-IJ-JRg" secondAttribute="trailing" type="default" id="kLq-PS-PQe"/>
                             <constraint firstItem="Yhj-e3-j6V" firstAttribute="leading" secondItem="ULb-IJ-JRg" secondAttribute="leading" type="default" id="yKU-qh-5Vu"/>
                         </constraints>
@@ -173,6 +175,28 @@
             <point key="canvasLocation" x="16" y="706"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="AlbumCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AlbumCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="albumImageView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="albumNameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="artistNameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="DetailViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="myTableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
