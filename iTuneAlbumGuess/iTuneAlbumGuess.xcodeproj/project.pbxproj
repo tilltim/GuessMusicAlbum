@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		845CF28916DF8F66007D359F /* AlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 845CF28816DF8F66007D359F /* AlbumCell.m */; };
+		84C2BDAB16E15EBF00704028 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C2BDAA16E15EBF00704028 /* background.png */; };
+		84C2BDAE16E15F1400704028 /* blue_button_press.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C2BDAC16E15F1400704028 /* blue_button_press.png */; };
+		84C2BDAF16E15F1400704028 /* blue_button_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C2BDAD16E15F1400704028 /* blue_button_pressed.png */; };
+		84C2BDB116E1619E00704028 /* musicbg3.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C2BDB016E1619E00704028 /* musicbg3.png */; };
+		84C2BDB316E1620E00704028 /* musicbg2.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C2BDB216E1620E00704028 /* musicbg2.png */; };
+		84C2BDB716E165BD00704028 /* musicbg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C2BDB616E165BD00704028 /* musicbg1.png */; };
 		84D4F27B16DF680A00612274 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D4F27A16DF680A00612274 /* UIKit.framework */; };
 		84D4F27D16DF680A00612274 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D4F27C16DF680A00612274 /* Foundation.framework */; };
 		84D4F27F16DF680A00612274 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84D4F27E16DF680A00612274 /* CoreGraphics.framework */; };
@@ -35,6 +41,12 @@
 /* Begin PBXFileReference section */
 		845CF28716DF8F66007D359F /* AlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumCell.h; sourceTree = "<group>"; };
 		845CF28816DF8F66007D359F /* AlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumCell.m; sourceTree = "<group>"; };
+		84C2BDAA16E15EBF00704028 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		84C2BDAC16E15F1400704028 /* blue_button_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_button_press.png; sourceTree = "<group>"; };
+		84C2BDAD16E15F1400704028 /* blue_button_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_button_pressed.png; sourceTree = "<group>"; };
+		84C2BDB016E1619E00704028 /* musicbg3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = musicbg3.png; sourceTree = "<group>"; };
+		84C2BDB216E1620E00704028 /* musicbg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = musicbg2.png; sourceTree = "<group>"; };
+		84C2BDB616E165BD00704028 /* musicbg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = musicbg1.png; sourceTree = "<group>"; };
 		84D4F27616DF680A00612274 /* iTuneAlbumGuess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTuneAlbumGuess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84D4F27A16DF680A00612274 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84D4F27C16DF680A00612274 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -90,6 +102,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84C2BDA916E15EB100704028 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				84C2BDB616E165BD00704028 /* musicbg1.png */,
+				84C2BDB216E1620E00704028 /* musicbg2.png */,
+				84C2BDB016E1619E00704028 /* musicbg3.png */,
+				84C2BDAC16E15F1400704028 /* blue_button_press.png */,
+				84C2BDAD16E15F1400704028 /* blue_button_pressed.png */,
+				84C2BDAA16E15EBF00704028 /* background.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		84D4F26B16DF680A00612274 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +165,7 @@
 		84D4F28116DF680A00612274 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				84C2BDA916E15EB100704028 /* Images */,
 				84D4F28216DF680A00612274 /* iTuneAlbumGuess-Info.plist */,
 				84D4F28316DF680A00612274 /* InfoPlist.strings */,
 				84D4F28616DF680A00612274 /* main.m */,
@@ -233,6 +259,12 @@
 				84D4F28F16DF680A00612274 /* Default@2x.png in Resources */,
 				84D4F29116DF680A00612274 /* Default-568h@2x.png in Resources */,
 				84D4F29416DF680A00612274 /* MainStoryboard.storyboard in Resources */,
+				84C2BDAB16E15EBF00704028 /* background.png in Resources */,
+				84C2BDAE16E15F1400704028 /* blue_button_press.png in Resources */,
+				84C2BDAF16E15F1400704028 /* blue_button_pressed.png in Resources */,
+				84C2BDB116E1619E00704028 /* musicbg3.png in Resources */,
+				84C2BDB316E1620E00704028 /* musicbg2.png in Resources */,
+				84C2BDB716E165BD00704028 /* musicbg1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +371,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iTuneAlbumGuess/iTuneAlbumGuess-Prefix.pch";
 				INFOPLIST_FILE = "iTuneAlbumGuess/iTuneAlbumGuess-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -350,6 +383,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iTuneAlbumGuess/iTuneAlbumGuess-Prefix.pch";
 				INFOPLIST_FILE = "iTuneAlbumGuess/iTuneAlbumGuess-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

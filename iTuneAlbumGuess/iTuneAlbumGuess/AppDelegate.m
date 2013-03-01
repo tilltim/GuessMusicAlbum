@@ -13,7 +13,31 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self UIAppearance];
     return YES;
+}
+
+-(void)UIAppearance
+{
+
+    
+    
+    UIImage *image = [UIImage imageNamed:@"blue_button_press.png"];
+    image = [image stretchableImageWithLeftCapWidth:11 topCapHeight:11];
+    
+    [[UIButton appearance] setBackgroundImage:image forState:UIControlStateNormal];
+    
+    UIImage *buttonPressed = [UIImage imageNamed:@"blue_button_pressed.png"];
+    buttonPressed = [buttonPressed stretchableImageWithLeftCapWidth:11 topCapHeight:11];
+    
+    [[UIButton appearance] setBackgroundImage:buttonPressed forState:UIControlStateHighlighted];
+    
+    //Ändra textfärgen i UIButton
+    [[UIButton appearance] setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
+    //Ändra textfärgen i UIlabel
+    [[UILabel appearance] setTextColor:[UIColor whiteColor]];
+    
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
