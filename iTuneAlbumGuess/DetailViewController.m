@@ -110,16 +110,11 @@
         
         [artistArray addObject:label3];
         
-<<<<<<< HEAD
-                
-        
         [[self myTableView] reloadData];
         
-=======
         NSLog(@"Artist: %@", artistArray);
     }
 }
->>>>>>> Lagt bla till en slumpArray-metod.
 
 - (NSArray*)shuffleArray:(NSArray*)unShuffledArray
 {
