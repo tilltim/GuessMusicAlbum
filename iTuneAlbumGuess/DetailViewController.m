@@ -43,6 +43,7 @@
     [[self myTableView] setDelegate:self];
     [[self myTableView] setDataSource:self];
     array = [[NSMutableArray alloc] init];
+    artistArray = [[NSMutableArray alloc]init];
     
     [array removeAllObjects];
     
@@ -99,19 +100,17 @@
         
         [photosArray addObject:label2];
 
-        [[self myTableView] reloadData];
         
         
         //ArtistName
-        NSDictionary *artistName = [diction objectForKey:@"im:artist"];
-        NSString *label3 = [artistName objectForKey:@"label"];
+        NSDictionary *artist = [diction objectForKey:@"im:artist"];
+        NSString *label3 = [artist objectForKey:@"label"];
         
         [artistArray addObject:label3];
         
-        NSLog(@"Artist: %@", artistArray);
+                
         
-        
-        
+        [[self myTableView] reloadData];
         
 
     }
@@ -154,7 +153,7 @@
 
 
     
-//    cell.artistNameLabel.text = [artistArray objectAtIndex:indexPath.row];
+    cell.artistNameLabel.text = [artistArray objectAtIndex:indexPath.row];
 //    NSLog(@"artistLabel %@", artistArray);
 
 
