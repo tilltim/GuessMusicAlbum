@@ -86,7 +86,10 @@
     NSDictionary *feed = [allDataDictionary objectForKey:@"feed"];
     NSArray *arrayOffEntry = [feed objectForKey:@"entry"];
     
-    for (NSDictionary *diction in arrayOffEntry)
+    // Calling the array´s shufflemethod.
+    NSArray *shuffledArrayOffEntry = [self shuffleArray:arrayOffEntry];
+        
+    for (NSDictionary *diction in shuffledArrayOffEntry)
     {
         //AlbumName
         NSDictionary *title = [diction objectForKey:@"title"];
@@ -101,21 +104,35 @@
         [photosArray addObject:label2];
 
         
-        
         //ArtistName
         NSDictionary *artist = [diction objectForKey:@"im:artist"];
         NSString *label3 = [artist objectForKey:@"label"];
         
         [artistArray addObject:label3];
         
+<<<<<<< HEAD
                 
         
         [[self myTableView] reloadData];
         
+=======
+        NSLog(@"Artist: %@", artistArray);
+    }
+}
+>>>>>>> Lagt bla till en slumpArray-metod.
 
+- (NSArray*)shuffleArray:(NSArray*)unShuffledArray
+{
+    NSMutableArray *temp = [[NSMutableArray alloc] initWithArray:unShuffledArray];
+    
+    for(NSUInteger i = [unShuffledArray count]; i > 1; i--)
+    {
+        NSUInteger j = arc4random_uniform(i);
+        [temp exchangeObjectAtIndex:i-1 withObjectAtIndex:j];
     }
     
-}
+    return [NSArray arrayWithArray:temp];
+} // eof method shuffleArray.
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
