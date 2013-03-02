@@ -18,6 +18,7 @@
     NSMutableArray *photosArray;
     NSArray *arrayOfImImage;
     NSMutableArray *artistArray;
+    int clickCounter;
 }
 
 @end
@@ -55,6 +56,7 @@
     {
         webData = [[NSMutableData alloc] init];
     }
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -102,7 +104,6 @@
         NSDictionary *label2 = [arrayOfImImage[0] objectForKey:@"label"];
         
         [photosArray addObject:label2];
-
         
         //ArtistName
         NSDictionary *artist = [diction objectForKey:@"im:artist"];
@@ -112,7 +113,7 @@
         
         [[self myTableView] reloadData];
         
-        NSLog(@"Artist: %@", artistArray);
+//        NSLog(@"Artist: %@", artistArray);
     }
 }
 
@@ -150,7 +151,7 @@
     }
 
 
-    // Tar bort all text efter bindestreck.
+    // Tar bort all text efter bindestrecket i titeln (vi vill ju bara ha artistnamnet i undermenyn.
     NSString *adjusted;
     
     NSString *rawAlbumNameLabel = [array objectAtIndex:indexPath.row];
@@ -185,7 +186,38 @@
     
     
     return cell;
-    
 }
+
+// När ett album är klickat/valt ska det skrivas ut i guessLabel:arna.
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *guessText = [array objectAtIndex:indexPath.row];
+    
+    switch (clickCounter)
+    {
+        case 0:
+            [[self firstGuessLabel] setText:[@"1. " stringByAppendingString:guessText]];
+            break;
+            
+        case 1:
+            [[self secondGuessLabel] setText:[@"2. " stringByAppendingString:guessText]];
+            break;
+            
+        case 2:
+            [[self thirdGuessLabel] setText:[@"3. " stringByAppendingString:guessText]];
+            break;
+
+        default:
+            break;
+    } // eof switch.
+    
+    clickCounter++;
+    if (clickCounter > 2)
+    {
+        clickCounter = 0;
+    }
+} // eof method tableView:didSelectRowAtIndexPath.
+
+
 
 @end
