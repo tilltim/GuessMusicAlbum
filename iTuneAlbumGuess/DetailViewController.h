@@ -13,9 +13,5 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (strong, nonatomic) id countryItem;
-@property (weak, nonatomic) IBOutlet UILabel *firstGuessLabel;
-@property (weak, nonatomic) IBOutlet UILabel *secondGuessLabel;
-@property (weak, nonatomic) IBOutlet UILabel *thirdGuessLabel;
-
 
 @end
