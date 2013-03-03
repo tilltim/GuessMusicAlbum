@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="tiq-ym-tbM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3012" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="tiq-ym-tbM">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -141,6 +141,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name of the album" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4J9-Mc-qcF">
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="224" id="0EM-uX-7kp"/>
                                                         <constraint firstAttribute="height" constant="22" id="6Te-8i-FyV"/>
@@ -150,6 +151,7 @@
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name of artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVb-Nf-XFf">
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="J7l-Q3-3S2"/>
                                                     </constraints>
@@ -176,17 +178,46 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ixg-E2-IK6">
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqQ-py-hpd">
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Azc-B7-Zah">
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Yhj-e3-j6V" firstAttribute="centerY" secondItem="ULb-IJ-JRg" secondAttribute="centerY" type="default" id="7W5-96-GaZ"/>
+                            <constraint firstAttribute="bottom" secondItem="iqQ-py-hpd" secondAttribute="bottom" constant="28" id="BRH-6Q-z4O"/>
+                            <constraint firstAttribute="trailing" secondItem="Ixg-E2-IK6" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Bby-p1-OOh"/>
+                            <constraint firstAttribute="bottom" secondItem="Azc-B7-Zah" secondAttribute="bottom" constant="5" id="I7X-w0-Eka"/>
+                            <constraint firstItem="Azc-B7-Zah" firstAttribute="leading" secondItem="ULb-IJ-JRg" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Nzk-G6-8eH"/>
+                            <constraint firstAttribute="bottom" secondItem="Ixg-E2-IK6" secondAttribute="bottom" constant="52" id="VTk-hL-DWQ"/>
+                            <constraint firstItem="Ixg-E2-IK6" firstAttribute="leading" secondItem="ULb-IJ-JRg" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="bYU-w7-nbv"/>
+                            <constraint firstAttribute="trailing" secondItem="iqQ-py-hpd" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="c0U-nh-RRb"/>
+                            <constraint firstAttribute="trailing" secondItem="Azc-B7-Zah" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="dER-9U-QXA"/>
+                            <constraint firstItem="iqQ-py-hpd" firstAttribute="leading" secondItem="ULb-IJ-JRg" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="eeQ-95-Uob"/>
                             <constraint firstItem="Yhj-e3-j6V" firstAttribute="trailing" secondItem="ULb-IJ-JRg" secondAttribute="trailing" type="default" id="kLq-PS-PQe"/>
                             <constraint firstItem="Yhj-e3-j6V" firstAttribute="leading" secondItem="ULb-IJ-JRg" secondAttribute="leading" type="default" id="yKU-qh-5Vu"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Oal-Fc-df0"/>
                     <connections>
+                        <outlet property="firstGuessLabel" destination="Ixg-E2-IK6" id="qZq-Bi-Y9f"/>
                         <outlet property="myTableView" destination="Yhj-e3-j6V" id="0uc-fV-asF"/>
+                        <outlet property="secondGuessLabel" destination="iqQ-py-hpd" id="G6N-8m-c8P"/>
+                        <outlet property="thirdGuessLabel" destination="Azc-B7-Zah" id="7P0-an-HjB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YJd-nr-cQk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -224,7 +255,10 @@
         <class className="DetailViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="firstGuessLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="myTableView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="secondGuessLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="thirdGuessLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
