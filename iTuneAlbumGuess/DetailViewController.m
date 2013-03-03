@@ -198,14 +198,20 @@
     {
         case 0:
             [[self firstGuessLabel] setText:[@"1. " stringByAppendingString:guessText]];
+            [[self secondGuessLabel] setTextColor:[UIColor redColor]];
+            [[self firstGuessLabel] setTextColor:[UIColor whiteColor]];
             break;
             
         case 1:
             [[self secondGuessLabel] setText:[@"2. " stringByAppendingString:guessText]];
+            [[self thirdGuessLabel] setTextColor:[UIColor redColor]];
+            [[self secondGuessLabel] setTextColor:[UIColor whiteColor]];
             break;
             
         case 2:
             [[self thirdGuessLabel] setText:[@"3. " stringByAppendingString:guessText]];
+            [[self firstGuessLabel] setTextColor:[UIColor redColor]];
+            [[self thirdGuessLabel] setTextColor:[UIColor whiteColor]];
             break;
             
         default:
