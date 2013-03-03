@@ -31,6 +31,14 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Gissa listans 3 i topp!"
+                                                    message:@"Tryck på de 3 musikalbum som du tror ligger överst på iTunes Top10. Rätt svar får du när listan är sparad."
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+    
+    
     if (!photosArray)
     {
         photosArray = [[NSMutableArray alloc] init];
@@ -56,6 +64,10 @@
     {
         webData = [[NSMutableData alloc] init];
     }
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"musicbg2.png"]];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -150,7 +162,7 @@
         cell = [[AlbumCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
 
-
+        
     // Tar bort all text efter bindestreck.
     NSString *adjusted;
     
@@ -210,7 +222,7 @@
             
         case 2:
             [[self thirdGuessLabel] setText:[@"3. " stringByAppendingString:guessText]];
-            [[self firstGuessLabel] setTextColor:[UIColor redColor]];
+            [[self firstGuessLabel] setTextColor:[UIColor whiteColor]];
             [[self thirdGuessLabel] setTextColor:[UIColor whiteColor]];
             break;
             

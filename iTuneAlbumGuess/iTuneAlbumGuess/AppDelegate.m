@@ -13,12 +13,14 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    
     [self UIAppearance];
     return YES;
 }
 
 -(void)UIAppearance
-{
+{    
     [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:118/255.0 green:176/255.0 blue:197/255.0 alpha:1]];
 ;
     
@@ -39,6 +41,9 @@
     
     //Ändra textfärgen i UIlabel
     [[UILabel appearance] setTextColor:[UIColor whiteColor]];
+    
+    
+//    [[UITableView appearance] setBackgroundColor:[UIColor colorWithRed:118/255.0 green:176/255.0 blue:197/255.0 alpha:1]];
     
 }
 							
