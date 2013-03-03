@@ -11,11 +11,14 @@
 
 @interface DetailViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, NSURLConnectionDataDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (strong, nonatomic) id countryItem;
 
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (weak, nonatomic) IBOutlet UILabel *firstGuessLabel;
 @property (weak, nonatomic) IBOutlet UILabel *secondGuessLabel;
 @property (weak, nonatomic) IBOutlet UILabel *thirdGuessLabel;
+
+
+- (IBAction)clearButton:(id)sender;
 
 @end
