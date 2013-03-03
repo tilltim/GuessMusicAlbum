@@ -65,7 +65,7 @@
         webData = [[NSMutableData alloc] init];
     }
     
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"musicbg2.png"]];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background.png"]];
     
     
 }
@@ -161,7 +161,14 @@
     {
         cell = [[AlbumCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
-
+    
+    
+    UIView *bgColorView = [[UIView alloc] init];
+    [bgColorView setBackgroundColor:[UIColor colorWithRed:2/255.0 green:38/255.0 blue:52/255.0 alpha:1]];
+//       [bgColorView setBackgroundColor:[UIColor blackColor]];
+    [cell setSelectedBackgroundView:bgColorView];
+    
+    
         
     // Tar bort all text efter bindestreck.
     NSString *adjusted;

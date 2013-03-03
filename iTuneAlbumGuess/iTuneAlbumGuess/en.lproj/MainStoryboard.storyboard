@@ -184,16 +184,16 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ixg-E2-IK6">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="U4P-oC-6fU"/>
-                                    <constraint firstAttribute="width" constant="280" id="g1K-iU-euO"/>
+                                    <constraint firstAttribute="width" constant="280" id="aKG-L8-Bwo"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iqQ-py-hpd">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="hqU-tv-7Bq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -201,7 +201,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="WdZ-QD-42k"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -241,20 +241,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Azc-B7-Zah" firstAttribute="leading" secondItem="iqQ-py-hpd" secondAttribute="leading" type="default" id="0ml-X4-Bv6"/>
                             <constraint firstItem="nfe-oW-aRS" firstAttribute="leading" secondItem="ULb-IJ-JRg" secondAttribute="leading" constant="52" id="2dC-rE-DTO"/>
-                            <constraint firstAttribute="bottom" secondItem="Azc-B7-Zah" secondAttribute="bottom" constant="80" id="2xG-Gp-m89"/>
-                            <constraint firstItem="iqQ-py-hpd" firstAttribute="leading" secondItem="Ixg-E2-IK6" secondAttribute="leading" type="default" id="47O-ln-ot2"/>
+                            <constraint firstAttribute="bottom" secondItem="Azc-B7-Zah" secondAttribute="bottom" constant="82" id="4Mt-aR-Q1L"/>
                             <constraint firstItem="Yhj-e3-j6V" firstAttribute="top" secondItem="ULb-IJ-JRg" secondAttribute="top" type="default" id="8Ln-no-2Ld"/>
                             <constraint firstAttribute="bottom" secondItem="iqQ-py-hpd" secondAttribute="bottom" constant="103" id="9m2-Ml-W7o"/>
-                            <constraint firstItem="iqQ-py-hpd" firstAttribute="trailing" secondItem="Ixg-E2-IK6" secondAttribute="trailing" type="default" id="H3C-kd-vkQ"/>
+                            <constraint firstItem="iqQ-py-hpd" firstAttribute="trailing" secondItem="Ixg-E2-IK6" secondAttribute="trailing" type="default" id="M6w-Me-aP4"/>
                             <constraint firstAttribute="bottom" secondItem="nfe-oW-aRS" secondAttribute="bottom" constant="11" id="PGI-3O-2qj"/>
-                            <constraint firstItem="Ixg-E2-IK6" firstAttribute="leading" secondItem="ULb-IJ-JRg" secondAttribute="leading" constant="15" id="RPs-rX-et1"/>
+                            <constraint firstItem="iqQ-py-hpd" firstAttribute="trailing" secondItem="Azc-B7-Zah" secondAttribute="trailing" type="default" id="QU3-XC-bx7"/>
+                            <constraint firstItem="Ixg-E2-IK6" firstAttribute="leading" secondItem="ULb-IJ-JRg" secondAttribute="leading" constant="22" id="VnQ-sp-mV3"/>
                             <constraint firstAttribute="trailing" secondItem="TwN-5r-3GF" secondAttribute="trailing" constant="59" id="cUq-ag-brw"/>
+                            <constraint firstItem="Azc-B7-Zah" firstAttribute="leading" secondItem="iqQ-py-hpd" secondAttribute="leading" type="default" id="g2t-XW-kgN"/>
                             <constraint firstItem="TwN-5r-3GF" firstAttribute="bottom" secondItem="nfe-oW-aRS" secondAttribute="bottom" type="default" id="hVd-SD-ucl"/>
                             <constraint firstItem="Yhj-e3-j6V" firstAttribute="trailing" secondItem="ULb-IJ-JRg" secondAttribute="trailing" type="default" id="kLq-PS-PQe"/>
                             <constraint firstItem="TwN-5r-3GF" firstAttribute="top" secondItem="nfe-oW-aRS" secondAttribute="top" type="default" id="nHT-i3-E1a"/>
-                            <constraint firstItem="Azc-B7-Zah" firstAttribute="trailing" secondItem="iqQ-py-hpd" secondAttribute="trailing" type="default" id="vof-MC-TWB"/>
+                            <constraint firstItem="iqQ-py-hpd" firstAttribute="leading" secondItem="Ixg-E2-IK6" secondAttribute="leading" type="default" id="smt-69-IJn"/>
                             <constraint firstItem="Yhj-e3-j6V" firstAttribute="leading" secondItem="ULb-IJ-JRg" secondAttribute="leading" type="default" id="yKU-qh-5Vu"/>
                             <constraint firstAttribute="bottom" secondItem="Ixg-E2-IK6" secondAttribute="bottom" constant="124" id="zrc-PL-ylk"/>
                         </constraints>
@@ -304,7 +304,6 @@
             <relationships>
                 <relationship kind="action" name="clearButton:"/>
                 <relationship kind="outlet" name="firstGuessLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="myScrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="myTableView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="secondGuessLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="thirdGuessLabel" candidateClass="UILabel"/>
@@ -323,6 +322,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="ZMX-FT-hWv"/>
+        <segue reference="8S1-BG-NSc"/>
     </inferredMetricsTieBreakers>
 </document>
