@@ -61,29 +61,20 @@
                                     <segue destination="AdB-6C-3Ki" kind="push" identifier="toUsaList" id="8S1-BG-NSc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Välj lista" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDf-Nc-coK">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Gissa listan!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDf-Nc-coK">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="146" id="bca-iG-IzT"/>
-                                    <constraint firstAttribute="height" constant="46" id="jYM-8q-kTa"/>
+                                    <constraint firstAttribute="height" constant="46" id="02p-Qk-0CN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="iTunes top10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLo-sN-lKG">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="iTunes top10 musikalbum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLo-sN-lKG">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="259" id="29g-3B-dzw"/>
                                     <constraint firstAttribute="height" constant="43" id="Tmz-DO-zHI"/>
+                                    <constraint firstAttribute="width" constant="259" id="ptZ-ta-5d8"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="musikalbum" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCg-wH-zf4">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="Il8-NB-oBe"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -91,19 +82,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="k1V-he-Dam" firstAttribute="trailing" secondItem="fvg-aw-6aE" secondAttribute="trailing" type="default" id="21N-Yg-1jb"/>
-                            <constraint firstItem="zCg-wH-zf4" firstAttribute="leading" secondItem="EDf-Nc-coK" secondAttribute="leading" type="default" id="6nt-yj-bnB"/>
-                            <constraint firstItem="zCg-wH-zf4" firstAttribute="top" secondItem="3" secondAttribute="top" constant="63" id="DPZ-YL-TpO"/>
+                            <constraint firstItem="CLo-sN-lKG" firstAttribute="centerX" secondItem="3" secondAttribute="centerX" type="default" id="2GM-xM-eml"/>
+                            <constraint firstAttribute="bottom" secondItem="UYG-jy-aMn" secondAttribute="bottom" constant="89" id="3Pc-Tr-Nh9"/>
+                            <constraint firstItem="fvg-aw-6aE" firstAttribute="top" secondItem="3" secondAttribute="top" constant="154" id="9h4-bc-BuR"/>
                             <constraint firstItem="k1V-he-Dam" firstAttribute="leading" secondItem="fvg-aw-6aE" secondAttribute="leading" type="default" id="EdB-dj-fYy"/>
-                            <constraint firstAttribute="bottom" secondItem="k1V-he-Dam" secondAttribute="bottom" constant="82" id="HEM-5J-pqz"/>
-                            <constraint firstItem="fvg-aw-6aE" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="69" id="IKg-Ig-Hes"/>
-                            <constraint firstItem="zCg-wH-zf4" firstAttribute="trailing" secondItem="CLo-sN-lKG" secondAttribute="trailing" type="default" id="KLx-v1-pO8"/>
-                            <constraint firstItem="CLo-sN-lKG" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="25" id="MQ1-RQ-VjV"/>
+                            <constraint firstItem="CLo-sN-lKG" firstAttribute="top" secondItem="3" secondAttribute="top" constant="39" id="I5U-r0-6CY"/>
+                            <constraint firstItem="EDf-Nc-coK" firstAttribute="top" secondItem="3" secondAttribute="top" constant="75" id="PZb-S6-wjC"/>
+                            <constraint firstItem="EDf-Nc-coK" firstAttribute="centerX" secondItem="fvg-aw-6aE" secondAttribute="centerX" type="default" id="WSq-Jd-swK"/>
                             <constraint firstItem="k1V-he-Dam" firstAttribute="leading" secondItem="UYG-jy-aMn" secondAttribute="leading" type="default" id="XD0-dJ-Ud8"/>
-                            <constraint firstItem="CLo-sN-lKG" firstAttribute="top" secondItem="3" secondAttribute="top" constant="36" id="YV2-aj-fkV"/>
-                            <constraint firstAttribute="bottom" secondItem="UYG-jy-aMn" secondAttribute="bottom" constant="25" id="akP-f5-rmN"/>
-                            <constraint firstItem="EDf-Nc-coK" firstAttribute="top" secondItem="3" secondAttribute="top" constant="111" id="j2t-46-Iww"/>
-                            <constraint firstItem="zCg-wH-zf4" firstAttribute="leading" secondItem="CLo-sN-lKG" secondAttribute="leading" type="default" id="kgn-xc-DVM"/>
-                            <constraint firstItem="k1V-he-Dam" firstAttribute="top" secondItem="fvg-aw-6aE" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nOG-Sn-oJa"/>
+                            <constraint firstItem="EDf-Nc-coK" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="53" id="g1Z-Mr-Wtp"/>
+                            <constraint firstAttribute="bottom" secondItem="k1V-he-Dam" secondAttribute="bottom" constant="150" id="hhF-w7-p98"/>
                             <constraint firstItem="UYG-jy-aMn" firstAttribute="trailing" secondItem="k1V-he-Dam" secondAttribute="trailing" type="default" id="te7-vk-u9P"/>
                         </constraints>
                     </view>
@@ -294,6 +282,6 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="wzq-fz-iAl"/>
+        <segue reference="ZMX-FT-hWv"/>
     </inferredMetricsTieBreakers>
 </document>

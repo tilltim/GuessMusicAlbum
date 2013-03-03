@@ -19,14 +19,16 @@
 
 -(void)UIAppearance
 {
-
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:118/255.0 green:176/255.0 blue:197/255.0 alpha:1]];
+;
     
-    
+    //knappar i normalt läge
     UIImage *image = [UIImage imageNamed:@"blue_button_press.png"];
     image = [image stretchableImageWithLeftCapWidth:11 topCapHeight:11];
     
     [[UIButton appearance] setBackgroundImage:image forState:UIControlStateNormal];
     
+    //knappar vid tryckning
     UIImage *buttonPressed = [UIImage imageNamed:@"blue_button_pressed.png"];
     buttonPressed = [buttonPressed stretchableImageWithLeftCapWidth:11 topCapHeight:11];
     
