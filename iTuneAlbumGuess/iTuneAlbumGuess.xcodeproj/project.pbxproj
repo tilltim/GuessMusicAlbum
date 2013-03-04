@@ -38,6 +38,7 @@
 		84E3EF7516E3520000D7409E /* background_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E3EF7416E3520000D7409E /* background_cell.png */; };
 		84E3EF7916E3595300D7409E /* background_cell2.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E3EF7816E3595300D7409E /* background_cell2.png */; };
 		84E3EFAA16E39A5B00D7409E /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 84E3EFA916E39A5B00D7409E /* background.png */; };
+		B68A5F7916E4962400307C2F /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B68A5F7816E4962400307C2F /* ResultViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,8 @@
 		84E3EF7416E3520000D7409E /* background_cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_cell.png; sourceTree = "<group>"; };
 		84E3EF7816E3595300D7409E /* background_cell2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background_cell2.png; sourceTree = "<group>"; };
 		84E3EFA916E39A5B00D7409E /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		B68A5F7716E4962400307C2F /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		B68A5F7816E4962400307C2F /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +166,8 @@
 				84D4F29616DF680A00612274 /* ViewController.m */,
 				84D4F2A316DF6CA700612274 /* DetailViewController.h */,
 				84D4F2A416DF6CA700612274 /* DetailViewController.m */,
+				B68A5F7716E4962400307C2F /* ResultViewController.h */,
+				B68A5F7816E4962400307C2F /* ResultViewController.m */,
 				84D4F28116DF680A00612274 /* Supporting Files */,
 			);
 			path = iTuneAlbumGuess;
@@ -298,6 +303,7 @@
 				84D4F2C216DF6EDF00612274 /* UIImageView+AFNetworking.m in Sources */,
 				84D4F2C516DF6F6200612274 /* AlbumsPhoto.m in Sources */,
 				845CF28916DF8F66007D359F /* AlbumCell.m in Sources */,
+				B68A5F7916E4962400307C2F /* ResultViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

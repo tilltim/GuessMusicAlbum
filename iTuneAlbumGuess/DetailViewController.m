@@ -9,6 +9,7 @@
 #import "DetailViewController.h"
 #import "AlbumsPhoto.h"
 #import "AlbumCell.h"
+#import "ResultViewController.h"
 
 @interface DetailViewController ()
 {
@@ -18,6 +19,8 @@
     NSMutableArray *photosArray;
     NSArray *arrayOfImImage;
     NSMutableArray *artistArray;
+    NSMutableArray *facitArray;
+
     int clickCounter;
 }
 
@@ -53,6 +56,7 @@
     [[self myTableView] setDataSource:self];
     array = [[NSMutableArray alloc] init];
     artistArray = [[NSMutableArray alloc]init];
+    facitArray = [[NSMutableArray alloc] init];
     
     [array removeAllObjects];
     
@@ -99,6 +103,15 @@
     NSDictionary *feed = [allDataDictionary objectForKey:@"feed"];
     NSArray *arrayOffEntry = [feed objectForKey:@"entry"];
     
+    // Några rader för att få ut den riktiga listan (alltså listan i rätt ordning).
+    for (NSDictionary *diction in arrayOffEntry)
+    {
+        NSDictionary *title = [diction objectForKey:@"title"];
+        NSString *label4 = [title objectForKey:@"label"];
+        
+        [facitArray addObject:label4];
+    }
+    
     // Calling the array´s shufflemethod.
     NSArray *shuffledArrayOffEntry = [self shuffleArray:arrayOffEntry];
         
@@ -125,7 +138,7 @@
         
         [[self myTableView] reloadData];
         
-        NSLog(@"Artist: %@", artistArray);
+//        NSLog(@"Artist: %@", artistArray);
     }
 }
 
@@ -168,8 +181,6 @@
 //       [bgColorView setBackgroundColor:[UIColor blackColor]];
     [cell setSelectedBackgroundView:bgColorView];
     
-    
-        
     // Tar bort all text efter bindestreck.
     NSString *adjusted;
     
@@ -183,8 +194,6 @@
     
     cell.albumNameLabel.text = adjusted;//[array objectAtIndex:indexPath.row];
 
-
-    
     cell.artistNameLabel.text = [artistArray objectAtIndex:indexPath.row];
 //    NSLog(@"artistLabel %@", artistArray);
 
@@ -193,16 +202,6 @@
     AlbumsPhoto *photo = photosArray[indexPath.row];
     NSString *photoString = (NSString *) photo;
     [cell.albumImageView setImageWithURL:[NSURL URLWithString:photoString]];
-    
-    // En metod för att ta bort bindestrcket och allt som är bakom. Vi ska använda denna metod senare.
-//    NSString * test = [NSString stringWithString:@"Searching for Sugar Man - Rodriguez"];
-//    NSRange range = [test rangeOfString:@"-"];
-//    if (range.length > 0)
-//    {
-//        NSString *adjusted = [test substringToIndex:range.location];
-//        NSLog(@"result: %@", adjusted);
-//    }
-    
     
     return cell;
     
@@ -216,20 +215,22 @@
     switch (clickCounter)
     {
         case 0:
-            [[self firstGuessLabel] setText:[@"1. " stringByAppendingString:guessText]];
+            // Låt denna avkommenterade raden vara kvar. Vi kanske behöver den i framtiden.
+//            [[self firstGuessLabel] setText:[@"1. " stringByAppendingString:guessText]];
+            [[self firstGuessLabel] setText:guessText];
             [[self secondGuessLabel] setTextColor:[UIColor redColor]];
             [[self firstGuessLabel] setTextColor:[UIColor whiteColor]];
             break;
             
         case 1:
-            [[self secondGuessLabel] setText:[@"2. " stringByAppendingString:guessText]];
+            [[self secondGuessLabel] setText:guessText];
             [[self thirdGuessLabel] setTextColor:[UIColor redColor]];
             [[self secondGuessLabel] setTextColor:[UIColor whiteColor]];
             break;
             
         case 2:
-            [[self thirdGuessLabel] setText:[@"3. " stringByAppendingString:guessText]];
-            [[self firstGuessLabel] setTextColor:[UIColor whiteColor]];
+            [[self thirdGuessLabel] setText:guessText];
+            [[self firstGuessLabel] setTextColor:[UIColor redColor]];
             [[self thirdGuessLabel] setTextColor:[UIColor whiteColor]];
             break;
             
@@ -253,4 +254,17 @@
     [[self thirdGuessLabel] setText:@"3."];
     [[self thirdGuessLabel] setTextColor:[UIColor whiteColor]];
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"toResultViewController"])
+    {
+        ResultViewController *rvc = (ResultViewController *) [segue destinationViewController];
+        rvc.firstGuessItem = [[self firstGuessLabel] text];
+        rvc.secondGuessItem = [[self secondGuessLabel] text];
+        rvc.thirdGuessItem = [[self thirdGuessLabel] text];
+        rvc.albumTitelAndArtistArray = facitArray;
+    }
+}
+
 @end
